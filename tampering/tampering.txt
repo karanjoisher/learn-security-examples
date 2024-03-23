@@ -1,0 +1,5 @@
+Tampering refers to modifying code or data through unsecure access points within the application which can compromise the privacy and security of the application.
+
+In this vulnerability, the server accepts any string input from the user. The server then uses the same string to render elements within an HTML object.
+As a result, any string provided by the user will be executed by the browser as part of the DOM processing.
+Attacker can inject <script> objects within the DOM which would then be executed by the browser and can compromise the security of the application.

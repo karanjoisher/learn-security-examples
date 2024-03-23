@@ -1,1 +1,6 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+
+Spoofing refers to pretending to be someone else by stealing their identity.
+In this vulnerability, the httpOnly configuration was set to false for the session.
+This allows the cookie to be accessed via the DOM object in JavaScript.
+Since all cookies in a browser are sent to any server being reached by the user, an attacker can deploy a malicious server that can steal the cookie and allow the attacker to masquarade as that user.
