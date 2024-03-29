@@ -1,3 +1,11 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+- As the input is not sanitized, an attacker can submit valid javascript code via the input which would then be executed by the browser 
+when it renders the UI, which can lead to stealing of cookies and information disclosure. To prevent this, the server sanitized the input by 
+verifying the string does not have any executable code in it.
+
 Which CIA property does tampering violate?
+Confidentiality and Integrity
+
 What additional security mechanisms can you incorporate?
+- implement HTTPS instead of HTTP
+- Hashing of passwords

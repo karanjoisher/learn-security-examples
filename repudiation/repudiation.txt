@@ -1,2 +1,7 @@
 - Briefly explain the vulnerability and why the secure version is better at preventing repudiation than the insecure version.
+Repudiation refers to denial of responsibility of a given action by a user due to lack of traces. Insecure version does not have any logging
+due to which a user's actions cannot be verified. The secure version implements proper logging with timestamps on the server side which can 
+be used for investigations in the event of a security breach.
+
 - What additional security mechanisms can you incorporate to prevent such attacks?
+Audit processes must be implemented on top of these logs to detect unusual and malicious activities.

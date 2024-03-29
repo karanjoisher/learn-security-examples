@@ -1,2 +1,8 @@
 - Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+In the insecure version, an attacker can pass malicious input that can cause the server to crash upon receiving the request.
+This can be triggered accidentally too by an actual user of the application. To protect against server crash (and as a result, denial of service),
+the server implements proper error handling using try catch blocks which prevents any service outages due to invalid inputs.
+
+
 - What additional security mechanisms can you incorporate to prevent such attacks?
+To prevent DoS and DDoS, we can implement rate limiting and route API requests through Content Delivery Network.

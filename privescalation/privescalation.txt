@@ -1,0 +1,2 @@
+In this scenario, a normal user is able to demote the rights of an admin to that of a normal user. To prevent this privilege escalation attack,
+authorization and authentication must be implemented properly using techniques like OAuth.

@@ -19,6 +19,7 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model('User', userSchema);
 
 // Route to authenticate user (VULNERABLE TO NOSQL INJECTION)
+// http://localhost:3000/userinfo?username=user1 <---- Injection
 app.get('/userinfo', async (req, res) => {
   const { username } = req.query;
 
